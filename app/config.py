@@ -10,6 +10,7 @@ class Config(object):
     TESTING = False
     CSRF_ENABLED = True
     SECRET_KEY = '1234'
+    DATA_FILE = os.getenv('DATA_FILE', os.path.join(basedir, 'data', 'data.json'))
 
 class ProductionConfig(Config):
     DEBUG = False
